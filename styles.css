@@ -1,0 +1,55 @@
+body {
+    font-family: 'Newsreader', serif;
+}
+h1 {
+    color: #426B1F; /*apply color to text */
+}
+h2 {
+    font-size: 64px; /*set font size*/
+    margin-top: 70px;
+    margin-left: 50px; /*apply left margin */
+    margin-right: 50px;
+    border-bottom: 1px solid #ccc; /* add bottom border*/
+    padding-bottom: 15px; /* add padding bottom of text*/
+}
+.header {
+    display: flex;
+    justify-content: space-between; /*align items to the right and left*/
+    align-items: center; /*center items vertically*/
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.buttons{
+    display: flex; /*arrange buttons in a row*/
+    justify-content:space-between; /*center buttons evenly */
+    width: 400px;
+    position: relative; /*add position relative for positioning the line */
+}
+.button {
+    padding: 20px 20px;
+    background-color: white;
+    border: none;
+    width:33%;
+    border-radius: 5px; /*add rounded corners?? */
+    cursor: pointer; /* add pointer cursor on hover*/
+    position: relative; /*add position relative for positioning the line */
+}
+
+.button:not(:last-child)::after { /*not selecting the last child aka button*/
+    content: ''; /*add pseudo-element for the line */
+    position: absolute; /* position the line absolutely */
+    top: 50%; /*move the line to the vertical center */
+    right: calc(100% +5px); /*adjust the right position to extend the line*/
+    left: 100%; /*move line to the right edge of the current button*/
+    transform: translateY(-50%); /*center the line vertically */
+    height: 75%;
+    width: 1px;
+    background-color: #ccc;
+} 
+.button:hover {
+    background-color: #e0e0e0;
+}
+a{
+
+}
