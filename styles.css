@@ -34,6 +34,8 @@ h2 {
     border-radius: 5px; /*add rounded corners?? */
     cursor: pointer; /* add pointer cursor on hover*/
     position: relative; /*add position relative for positioning the line */
+    font-family: 'Newsreader', serif;
+    font-size: 18px;
 }
 
 .button:not(:last-child)::after { /*not selecting the last child aka button*/
@@ -50,6 +52,51 @@ h2 {
 .button:hover {
     background-color: #e0e0e0;
 }
-a{
-
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*adjust width of each column*/
+    grid-column-gap: 1em; /*adjust the gap between grid items*/
+    grid-row-gap: 1em;
+    grid-gap: 1em;
+    margin-right: 50px;
+    margin-left: 50px;
+    justify-content: center; /*center the grid items horizontally*/
+}
+.grid-item{
+    overflow: hidden; /*ensure images don't overflow grid items */
+    position: relative;
+    aspect-ratio: 1; /* ensure the grid items are square*/
+}
+.grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensure images cover the entire grid item*/
+}
+/*.grid-item img:hover {
+    filter: brightness(50%);
+}*/
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /*initially hide the overlay*/
+    justify-content: center;
+    align-items: center;
+    color: white; /*text color*/
+    font-size: 1.5rem; 
+    text-align: center;
+    background-color: rgba(0,0,0,0.5); /*semi-transparent black background */
+}
+.grid-item:hover .overlay{
+    display: flex; /*show the overlay on hover*/
+}
+.big-title{
+    font-size: 2rem;
+}
+.small-title {
+    font-size: 1rem;
+    display: block; /*display as block level element */
+    margin-top: 75px; /*add space between big n small title*/
 }
