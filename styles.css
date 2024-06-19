@@ -68,9 +68,10 @@ h2 {
     grid-column-gap: 1em; /*adjust the gap between grid items*/
     grid-row-gap: 1em;
     grid-gap: 1em;
-    margin: 0 auto; /*center the grid container*/
+    margin-right: 50px;
+    margin-left: 50px;
     justify-content: center; /*center the grid items horizontally*/
-    padding-top: 50px; /*add padding to create space*/
+    margin-top: 50px; /*add padding to create space*/
 }
 .grid-item{
     overflow: hidden; /*ensure images don't overflow grid items */
